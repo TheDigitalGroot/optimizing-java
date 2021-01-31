@@ -19,7 +19,9 @@ public class Caching {
             long t2 = System.nanoTime();
             long elEveryLine = t1 - t0;
             long elEveryItem = t2 - t1;
-            System.out.println(elEveryLine + " " + elEveryItem);
+            double diff = elEveryItem - elEveryLine;
+            System.out.println(elEveryLine + " " + elEveryItem + " " + (100 * diff / elEveryLine));
+            //System.out.println(elEveryLine + " " + elEveryItem);
         }
     }
 
